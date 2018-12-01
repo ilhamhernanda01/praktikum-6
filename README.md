@@ -78,7 +78,7 @@ int inputData(string v)
 ```
 
 ![sss](https://github.com/ilhamhernanda01/praktikum-6/blob/master/screenshoot1.png)
-![flow](
+![flow](https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart1.jpg)
 
 
 ##latihan2.1
@@ -115,7 +115,8 @@ cout << "Nilai 2 : " << b << endl;
 return 0;
 }
 ```
-![ss2](https://raw.githubusercontent.com/Amirul29/praktikum6/master/latihan2/21.png)
+![ss2](https://github.com/ilhamhernanda01/praktikum-6/blob/master/screenshoot21.png)
+![flow] (https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart21.jpg)
 
 ##latihan2.2
 
@@ -151,5 +152,6 @@ main(){
     return 0;
 }
 ```
-![ss2](https://raw.githubusercontent.com/Amirul29/praktikum6/master/latihan2/22.png)
-![flow](
+
+![ss2](https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart22.jpg)
+![flow](https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart22.jpg)

@@ -1,21 +1,31 @@
-# praktikum-6
+# praktikum6
 
-##latihan1.cpp : Buatlah fungsi(void) menggunakan passing parameter by reference untuk menukar nilai dari dua buah variable.
+ 
+## latihan **menggunakan header untuk mengabungka fungsi void**
+**Alur Algoritma**
+1. mulai program fungsi dengan menggunakan void
+2. deklarasiakan terlebihdahulu fungsi yang ingin kita masukan ke header di satu file
+3. masukan file tadi ke header yang ingin kita buat
+4. kemudian panggil semua data tadi yang sudah di buat di foder yang berbeda kedalam pusat project yang,
+yang ingin kita buat jalan kan project itu dengan menggunakan fungsi juga 
+5. run project jika tidak ada kendala atau eror
+5. end
 
-**Alur algoritma**
-1. Mendeklarasikan variabel 'int(kali, bagi, tambah, kurang);' sebagai variable input.
-2. Membaca input dari keyboard 'return a*b, a/b, a+b, a-b'
-3. Membandingkan nilai variable return a*b, a/b, a+b, a-b
 
-**Flowchart Program**
-![Flowchart](https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart1.jpg)
+**Kode Program**
+##Header 
+```
+#ifndef KAL_H_INCLUDED
+#define KAL_H_INCLUDED
+int kali(int, int);
+double bagi(int, int);
+int tambah(int, int);
+int kurang(int, int);
 
-**Screenshoot**
-![Screenshoot](https://github.com/ilhamhernanda01/praktikum-6/blob/master/screenshoot1.png)
 
-**code program lengkap**
-'''c++
-
+#endif // KAL_H_INCLUDED
+##isi
+```
 #include<iostream>
 using namespace std;
 
@@ -35,35 +45,53 @@ int kurang(int a, int b){
 return a-b;
 }
 
+##utama
+```
+#include<iostream>
+#include<kal.h>
+
+using namespace std;
+
+int inputData(string v="A");
+
+int main(int argc, char const *argv[])
+{
+    int a, b;
+    a = inputData();
+    b = inputData("B");
+
+    cout << "\nHasil Perkalian AxB adalah: " << kali(a, b) << endl;
+    cout << "\nHasil Pembagian A/B adalah: " << bagi(a, b) << endl;
+    cout << "\nHasil Penambahan A+B adalah: " << tambah(a, b)<< endl;
+    cout << "\nHasi Pengurangan A-B adalah: " << kurang(a, b) << endl;
 
 
-###latihan2.cpp :  Buatlah fungsi perkalian 2 buah bilangan bulat dengan menggunakan operator penjumlahan. (gunakan passing by value)
+    return 0;
+}
+int inputData(string v)
+{
+    cout << "masukan Bilagan " << v << ": ";
+    int bil;
+    cin >> bil;
+    return bil;
+}
+```
 
-**Alur algoritma**
-1. Mendeklarasikan variabel 'void tukar(int *a, int *b)' sebagai variable input.
-2. Membaca input dari keyboard 'int c;
-    				c = *a;
-    				*a = *b;
-    				*b = c;'
-3. Membandingkan nilai variable  cout << "Nilai 1 : " << a << endl;
-				 cout << "Nilai 2 : " << b << endl;
+![sss](https://raw.githubusercontent.com/Amirul29/praktikum6/master/latihan1/1.png)
+![flow](
 
 
-**Flowchart Program**
-![Flowchart21](https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart21.jpg)
+##latihan2.1
 
-**Flowchart Program**
-![Flowchart22](https://github.com/ilhamhernanda01/praktikum-6/blob/master/flowchart22.jpg)
+**Alur Algoritma**
+1.mulai program untuk menukar nilai 
+2.gunakan cara passing parameter untuk mengalamatkan yang nantinya akan di ubah dalam fungsi
+3.untuk menukar gunakan pointer pada variabel penukar untuk menandakan.
+4.build dan run jika tidak ada kendala (eror) jalankan
+5. end
 
-**Screenshoot**
-![Screenshoot21](https://raw.githubusercontent.com/fiqihalfiansyahzahari/Praktikum6/master/Screenshoot21.png)
-
-**Screenshoot**
-![Screenshoot22](https://github.com/ilhamhernanda01/praktikum-6/blob/master/screenshoot22.png)
-
-**code program lengkap**
-'''c++
-
+**kode Program**
+```
 #include<iostream>
 using namespace std;
 
@@ -86,3 +114,42 @@ cout << "Nilai 1 : " << a << endl;
 cout << "Nilai 2 : " << b << endl;
 return 0;
 }
+```
+![ss2](https://raw.githubusercontent.com/Amirul29/praktikum6/master/latihan2/21.png)
+
+##latihan2.2
+
+**Alur Algoritma**
+1. mulai program menghitung dua bilangan dengan oprator penjumlah
+2. deskripsikan interger a dan b
+3. gunakan fungsi pengulangan for.
+4. gunakann kembali rumus fungsi untuk menjalankan program
+5. build and run
+6. end
+
+**Code Program**
+```
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+int kali(int m, int n)
+{
+    int i, hasil=0;
+    for (i=1; i<=(n);i++)
+        hasil +=m;
+    if (n<0) return(-hasil); else return(hasil);
+}
+main(){
+    int a,b;
+    cout<<"\nMasukan Bilangan : ";
+    cin >>a;
+    cout<<"\nDikali Dengan : ";
+    cin >>b;
+    cout<< "Nilai " << a << " X " << b <<"=" << kali(a,b);
+    return 0;
+}
+```
+![ss2](https://raw.githubusercontent.com/Amirul29/praktikum6/master/latihan2/22.png)
+![flow](
